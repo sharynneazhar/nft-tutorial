@@ -1,11 +1,15 @@
 {
-  "name": "nft-tutorial",
-  "version": "1.0.0",
-  "description": "Tutorial on how to create smart contracts and upload NFTs to IPFS",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "upload": "node -r dotenv/config scripts/uploadAsset.js",
+    "mint": "node -r dotenv/config scripts/mint.js"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.0",
+    "@truffle/contract": "^4.5.16",
+    "@truffle/hdwallet-provider": "^1.2.3",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "form-data": "^4.0.0",
+    "web3": "^1.7.4"
+  }
 }
